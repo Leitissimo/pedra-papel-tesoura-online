@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lobby — Pedra Papel Tesoura</title>
+  <link rel="icon" href="style/avpuilauncher.ico">
+  <link rel="stylesheet" href="style/lobby.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+  <main class="center">
+    <div class="card">
+      <header class="card-header">
+        <h1>Pedra · Papel · Tesoura</h1>
+        <p class="subtitle">Crie ou entre em uma sala — jogue online com um amigo</p>
+      </header>
+
+      <section class="card-body">
+        <div class="row">
+          <button id="btn-create" class="btn primary">Criar sala</button>
+        </div>
+
+        <div class="divider" aria-hidden="true">ou</div>
+
+        <div class="row join-row">
+          <input id="input-join" type="text" maxlength="4" placeholder="Código da sala (ex: 4821)" />
+          <button id="btn-join" class="btn secondary">Entrar</button>
+        </div>
+
+        <div id="room-info" class="room-info" aria-live="polite"></div>
+
+        <small class="hint">Seu amigo sempre escolherá pedra!</small>
+      </section>
+
+      <footer class="card-footer">
+        <div class="credits">Multiplayer • Socket.io</div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/lobby.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>

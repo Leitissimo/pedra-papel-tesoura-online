@@ -1,0 +1,221 @@
+/* ===== TEMA CLARO ===== */
+:root {
+  --bg: #f3f4f6;
+  --bg-gradient: linear-gradient(180deg, #eef2ff 0%, #f3f4f6 100%);
+
+  --card: #ffffff;
+
+  --text: #111827;
+  --text-light: #374151;
+  --muted: #6b7280;
+
+  --accent: #2b8fef;
+  --accent-2: #ef6b6b;
+
+  --shadow: 0 10px 32px rgba(0,0,0,0.08);
+}
+
+/* ===== TEMA ESCURO ===== */
+html.dark {
+  --bg: #0d1117;
+  --bg-gradient: linear-gradient(180deg, #0d1117 0%, #0b0f14 100%);
+
+  --card: #161b22;
+
+  --text: #e6edf3;
+  --text-light: #c9d1d9;
+  --muted: #8b949e;
+
+  --accent: #4493f8;
+  --accent-2: #ff7676;
+
+  --shadow: 0 10px 32px rgba(0,0,0,0.55);
+}
+
+/* animação suave ao trocar */
+html {
+  transition: background-color .25s ease, color .25s ease;
+}
+
+
+/* ===== SISTEMA DE TEMA ===== */
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #6b7280;
+
+  --accent: #2b8fef;
+  --accent-2: #ef6b6b;
+
+  --shadow: 0 8px 30px rgba(15,23,42,0.07);
+}
+
+html.dark {
+  --bg: #0d1117;
+  --card: #161b22;
+  --text: #e6edf3;
+  --muted: #8b949e;
+
+  --accent: #4493f8;
+  --accent-2: #ff7676;
+
+  --shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+html {
+  transition: background-color .25s ease, color .25s ease;
+}
+
+.theme-btn {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  font-size: 18px;
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: var(--shadow);
+  transition: .2s ease;
+}
+
+.theme-btn:hover {
+  opacity: .85;
+}
+
+
+/* lobby.css — estilo moderno clean (A1) */
+:root{
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2b8fef; /* primary button */
+  --accent-2: #ef6b6b; /* secondary */
+  --shadow: 0 8px 30px rgba(15,23,42,0.07);
+  --radius: 14px;
+  --maxw: 440px;
+  --text: #0f172a;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg-gradient);
+  color: var(--text);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.center{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+.card{
+  width:100%;
+  max-width:var(--maxw);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  border: 1px solid rgba(15,23,42,0.03);
+}
+
+.card-header h1{
+  margin:0;
+  font-size:22px;
+  letter-spacing:0.2px;
+}
+.subtitle{
+  margin:6px 0 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.card-body{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+
+.row{display:flex;gap:10px;align-items:center}
+
+.btn{
+  border:0;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+  box-shadow: none;
+}
+
+.btn.primary{
+  background: linear-gradient(180deg,var(--accent), #1f78d6);
+  color:white;
+}
+
+.btn.secondary{
+  background: linear-gradient(180deg,var(--accent-2), #d95353);
+  color:white;
+}
+
+.join-row input[type="text"]{
+  flex:1;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(15,23,42,0.06);
+  font-size:14px;
+  outline:none;
+  background: #fff;
+}
+
+.join-row input::placeholder{color: #b7c0cf}
+
+.divider{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin:4px 0;
+}
+
+.room-info{
+  margin-top:6px;
+  font-size:14px;
+  color:var(--muted);
+  min-height:20px;
+}
+
+/* small help text */
+.hint{ color:var(--muted); font-size:12px; display:block; margin-top:6px; }
+
+/* responsive */
+@media (max-width:420px){
+  .card{padding:18px}
+  .btn{font-size:13px}
+  .subtitle{font-size:12px}
+}
+
+.theme-btn {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  font-size: 18px;
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: var(--shadow);
+  transition: .2s ease;
+  z-index: 99999;
+}

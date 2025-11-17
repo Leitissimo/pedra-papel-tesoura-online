@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jogo — Pedra Papel Tesoura</title>
+  <link rel="icon" href="style/avpuilauncher.ico">
+  <link rel="stylesheet" href="style/game.css">
+</head>
+<body>
+  <main class="game-center">
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <div class="game-card">
+      <header class="game-header">
+        <div class="title-block">
+          <h2>Pedra · Papel · Tesoura</h2>
+          <div id="room-tag" class="room-tag">Sala — —</div>
+        </div>
+        <div class="status-block">
+          <div id="status" class="status-text">Você: —</div>
+          <div id="opponent" class="opponent-text">Adversário: —</div>
+        </div>
+      </header>
+
+      <section class="game-body">
+        <div class="msg">Selecione sua jogada</div>
+
+        <div class="botoes">
+          <button id="tesoura" class="move">✂️</button>
+          <button id="papel" class="move">📝</button>
+          <button id="pedra" class="move">🪨</button>
+        </div>
+
+        <div class="info-row">
+  <div id="placar" class="placar">Vitórias: 0 | Derrotas: 0</div>
+  <div id="room-info" class="room-info-small"></div>
+</div>
+
+<!-- CHAT ABAIXO DO BLOCO DE INFO -->
+<div class="chat-box">
+  <div id="chat-messages" class="chat-messages"></div>
+
+  <div class="chat-input-area">
+      <input id="chat-input" type="text" placeholder="Digite uma mensagem..." />
+      <button id="chat-send">Enviar</button>
+  </div>
+</div>
+      </section>
+    </div>
+  </main>
+
+  <!-- modal -->
+  <div id="resultado-modal" class="modal-oculto">
+    <div class="modal-card">
+      <h1 id="resultado-texto">Resultado</h1>
+      <div id="detalhe" class="detalhe"></div>
+      <div style="height:12px"></div>
+      <button id="modal-ok" class="btn-ok">OK</button>
+    </div>
+  </div>
+
+  <!-- sounds -->
+  <audio id="som-click" src="sounds/click.wav"></audio>
+  <audio id="som-win" src="sounds/win.wav"></audio>
+  <audio id="som-lose" src="sounds/lose.wav"></audio>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/theme.js"></script>
+
+</body>
+</html>
