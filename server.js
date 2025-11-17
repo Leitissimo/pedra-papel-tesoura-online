@@ -1,6 +1,7 @@
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
+const path = require("path");
 
 const app = express();
 const server = http.createServer(app);
@@ -15,6 +16,13 @@ const io = new Server(server, {
 
 // Servir arquivos da pasta public/
 app.use(express.static("public"));
+
+app.use(express.static("public"));
+
+// ROTA PRINCIPAL - REDIRECIONA PARA O LOBBY
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "lobby.html"));
+});
 
 // =========================
 // SISTEMA DE SALAS E PLAYERS
